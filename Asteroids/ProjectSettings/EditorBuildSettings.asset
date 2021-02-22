@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Title.unity
+    guid: 4367d4035b9579d439201977fd72a80f
+  - enabled: 1
+    path: Assets/Scenes/Asteroids.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Lose Title.unity
+    guid: 6dee1ddbae9af434482cc9c0d62f44db
+  - enabled: 1
+    path: Assets/Scenes/Win Title.unity
+    guid: 2db600f25a2d06345bf2a594b618fd98
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: fd2d752203b07c347ae3082010ff29ec
+  m_configObjects: {}
