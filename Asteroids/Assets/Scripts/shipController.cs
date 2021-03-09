@@ -158,7 +158,7 @@ public class shipController : MonoBehaviour
 
     public void asteroidBigScore()
     {
-        scoreCounter += 0050;
+        scoreCounter += 50;
         
         Score.GetComponent<Text>().text = scoreCounter.ToString();
 

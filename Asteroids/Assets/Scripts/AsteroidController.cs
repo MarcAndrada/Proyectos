@@ -35,6 +35,9 @@ public class AsteroidController : MonoBehaviour
 
         animator = GetComponent<Animator>();
         HitParamID = Animator.StringToHash("Hitted");
+
+        score = FindObjectOfType<shipController>();
+                   
     }
 
     // Update is called once per frame
@@ -62,16 +65,22 @@ public class AsteroidController : MonoBehaviour
             collision.gameObject.tag = "Untagged";
             if (gameObject.name == "asteroid-Big")
             {
+                gameObject.tag = "Untagged";
+                score.asteroidBigScore();
                 asteroidsFunction();
-                score.asteroidBigScore();   
+                
             }else if (gameObject.name == "asteroid-Medium" || gameObject.name == "asteroid-Medium(Clone)"){
-                asteroidsFunction();
+                gameObject.tag = "Untagged";
                 score.asteroidMediumScore();
+                asteroidsFunction();
+                
             }else{
+                gameObject.tag = "Untagged";
+                score.asteroidSmallScore();
                 bulletHit = true;
                 rigidb.velocity = new Vector3(0, 0, 0);
                 animator.SetTrigger(HitParamID);
-                score.asteroidSmallScore();
+                
             }
 
             //StartCoroutine(AsteroidDestroyed());
